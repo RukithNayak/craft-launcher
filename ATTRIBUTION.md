@@ -19,6 +19,8 @@ next to them.
 | `assets/fonts/Inter-Variable.ttf` | Inter 4.001, variable (body text) | The Inter Project Authors (Rasmus Andersson) | Google Fonts, <https://github.com/google/fonts/tree/main/ofl/inter> (`Inter[opsz,wght].ttf`, renamed) | SIL OFL 1.1, [`assets/fonts/OFL-Inter.txt`](assets/fonts/OFL-Inter.txt) |
 | `assets/fonts/Archivo-Variable.ttf` | Archivo 2.001, variable (headings and app names) | The Archivo Project Authors (Omnibus-Type) | Google Fonts, <https://github.com/google/fonts/tree/main/ofl/archivo> (`Archivo[wdth,wght].ttf`, renamed) | SIL OFL 1.1, [`assets/fonts/OFL-Archivo.txt`](assets/fonts/OFL-Archivo.txt) |
 | `assets/fonts/GeistMono-Variable.ttf` | Geist Mono 1.701, variable (labels and buttons) | The Geist Project Authors (Vercel) | Google Fonts, <https://github.com/google/fonts/tree/main/ofl/geistmono> (`GeistMono[wght].ttf`, renamed) | SIL OFL 1.1, [`assets/fonts/OFL-GeistMono.txt`](assets/fonts/OFL-GeistMono.txt) |
+| `packaging/macos/dmg-background.tiff` | ArtCraft Launcher macOS DMG installation background | Supplied launcher artwork | 1x/2x TIFF export of the supplied installation background | ArtCraft Launcher contributors; the ArtCraft mark remains a trademark ([`docs/brand/LICENSE-brand.txt`](docs/brand/LICENSE-brand.txt)) |
+| `packaging/macos/dmg-layout.DS_Store` | Finder window and icon layout for the ArtCraft Launcher DMG | ArtCraft Launcher contributors | Generated metadata for the `ArtCraft Launcher` volume, `ArtCraft Launcher.app`, `Applications`, and `.background/background.tiff` | macOS Finder metadata |
 
 ### Craft App Suite icons
 

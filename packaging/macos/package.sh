@@ -130,13 +130,15 @@ fi
 # ---- DMG ---------------------------------------------------------------------------------------
 echo "==> building $DMG"
 STAGE="$WORK/dmg"
-mkdir -p "$STAGE"
+mkdir -p "$STAGE/.background"
 ditto "$APP" "$STAGE/$APP_NAME.app"
 ln -s /Applications "$STAGE/Applications"
+cp "$HERE/dmg-background.tiff" "$STAGE/.background/background.tiff"
+cp "$HERE/dmg-layout.DS_Store" "$STAGE/.DS_Store"
 rm -f "$DMG" "$WORK/raw.dmg"
 # makehybrid + convert builds the image without attaching a device, unlike `create -srcfolder`,
 # which is flaky on CI runners ("Resource busy") and hangs in sandboxed sessions.
-hdiutil makehybrid -hfs -hfs-volume-name "$APP_NAME $VERSION" -hfs-openfolder "$STAGE" -o "$WORK/raw.dmg" "$STAGE"
+hdiutil makehybrid -hfs -hfs-volume-name "$APP_NAME" -hfs-openfolder "$STAGE" -o "$WORK/raw.dmg" "$STAGE"
 hdiutil convert "$WORK/raw.dmg" -format UDZO -imagekey zlib-level=9 -o "$DMG"
 rm -f "$WORK/raw.dmg"
 sign "$DMG"
